@@ -54,7 +54,7 @@ jobs:
 
       - name: Upload test results
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: test-results-${{ github.sha }}
           path: app/build/reports/tests/
@@ -62,7 +62,7 @@ jobs:
 
       - name: Upload lint results
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lint-results-${{ github.sha }}
           path: |
@@ -177,7 +177,7 @@ jobs:
 
       - name: Upload instrumented test results
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: instrumented-test-results-api${{ matrix.api-level }}-${{ github.sha }}
           path: app/build/reports/androidTests/
