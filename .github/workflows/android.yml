@@ -103,7 +103,7 @@ jobs:
              app/build/outputs/apk/open/release/wifi-wps-wpa-tester-${{ steps.version.outputs.VERSION }}.apk
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           name: Release ${{ steps.version.outputs.VERSION }}
           generate_release_notes: true
